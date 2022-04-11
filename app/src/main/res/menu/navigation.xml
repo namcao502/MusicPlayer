@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_all_track"
+        android:icon="@drawable/icons8_all_music_64"
+        android:title="All music" />
+
+    <item
+        android:id="@+id/navigation_playlist"
+        android:icon="@drawable/icons8_playlist_64"
+        android:title="Playlist" />
+
+</menu>

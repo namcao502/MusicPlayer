@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+
+    tools:context=".activities.MusicPlayerActivity">
+
+    <TextView
+        android:id="@+id/textViewAlbumPlayer"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+
+        android:singleLine="true"
+        android:text="Album"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewArtistPlayer">
+
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageViewShuffleAndLoop"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icons8_repeat_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewAddToPlaylist"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAlbumPlayer" />
+
+    <ImageView
+        android:id="@+id/imageViewAddToPlaylist"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/icons8_no_love_64"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewShuffleAndLoop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAlbumPlayer" />
+
+    <ImageView
+        android:id="@+id/imageViewMax"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/icons8_audio_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/seekBarVolume"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlay" />
+
+    <SeekBar
+        android:id="@+id/seekBarVolume"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:progressTint="@color/Primary"
+        android:thumbTint="@color/PrimaryDark"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewMax"
+        app:layout_constraintStart_toEndOf="@+id/imageViewMin"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlay" />
+
+    <TextView
+
+        android:textAlignment="center"
+
+        android:id="@+id/textViewTitlePlayer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+
+        android:clickable="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+
+        android:text="Title"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlayer">
+
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/imageViewPlay"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/icons8_pause_64"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewNext"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPrevious"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarProgress" />
+
+    <SeekBar
+        android:id="@+id/seekBarProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:progressTint="@color/Primary"
+        android:thumbTint="@color/PrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewStart" />
+
+    <TextView
+        android:id="@+id/textViewArtistPlayer"
+
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:scrollHorizontally="true"
+
+        android:singleLine="true"
+        android:text="Artist"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitlePlayer">
+
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textViewStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="00:00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewAddToPlaylist" />
+
+    <ImageView
+        android:id="@+id/imageViewNext"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/icons8_next_64"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPlay"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarProgress" />
+
+    <ImageView
+        android:id="@+id/imageViewPrevious"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/icons8_previous_64"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewPlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarProgress" />
+
+    <ImageView
+        android:id="@+id/imageViewMin"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/icons8_mute_64"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarVolume"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPlay" />
+
+    <TextView
+        android:id="@+id/textViewEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="00:00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewShuffleAndLoop" />
+
+    <ImageView
+        android:background="@drawable/music_default"
+        android:id="@+id/imageViewPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
